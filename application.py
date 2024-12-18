@@ -5,5 +5,13 @@ app=Flask(__name__)
 def index():
     return "Hello world!"
 
+@app.route("/asim")
+def asim():
+    return "Hello asim!!"
+
+@app.route("/<string:name>")
+def hello(name):
+    return f"hello {name}!!!"
+
 if __name__=="__main__":
     app.run()
